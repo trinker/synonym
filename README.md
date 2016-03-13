@@ -16,7 +16,7 @@ Status](https://coveralls.io/repos/trinker/synonym/badge.svg?branch=master)](htt
 **synonym** is a synonyms data set wrapped with a few tools for quickly
 looking up relevant synonyms.
 
-<img src="inst/synonym_logo/synonym_humor.png" width="200" alt="readability Logo">
+<img src="inst/synonym_logo/synonym_humor.png" width="400" alt="readability Logo">
 
 
 Table of Contents
