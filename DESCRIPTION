@@ -1,0 +1,15 @@
+Package: synonym
+Title: Find Relevant Synonyms
+Version: 0.0.1
+Authors@R: c(person("Tyler", "Rinker", email =
+        "tyler.rinker@gmail.com", role = c("aut", "cre")))
+Maintainer: Tyler Rinker <tyler.rinker@gmail.com>
+Description: Fast 'data.table' lookups of relevant synonyms.
+Depends: R (>= 3.2.3)
+Imports: data.table, jsonlite, stats
+Suggests: testthat
+Date: 2016-03-13
+License: GPL-2
+LazyData: TRUE
+Roxygen: list(wrap = FALSE)
+RoxygenNote: 5.0.1

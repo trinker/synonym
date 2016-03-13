@@ -1,0 +1,69 @@
+---
+title: "synonym"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  md_document:
+    toc: true      
+---
+
+```{r, echo=FALSE}
+desc <- suppressWarnings(readLines("DESCRIPTION"))
+regex <- "(^Version:\\s+)(\\d+\\.\\d+\\.\\d+)"
+loc <- grep(regex, desc)
+ver <- gsub(regex, "\\2", desc[loc])
+verbadge <- sprintf('<a href="https://img.shields.io/badge/Version-%s-orange.svg"><img src="https://img.shields.io/badge/Version-%s-orange.svg" alt="Version"/></a></p>', ver, ver)
+````
+
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
+[![Build Status](https://travis-ci.org/trinker/synonym.svg?branch=master)](https://travis-ci.org/trinker/synonym)
+[![Coverage Status](https://coveralls.io/repos/trinker/synonym/badge.svg?branch=master)](https://coveralls.io/r/trinker/synonym?branch=master)
+`r verbadge`
+
+<img src="inst/synonym_logo/r_synonym.png" width="150" alt="readability Logo">  
+
+**synonym** is a synonyms data set wrapped with a few tools for quickly looking up relevant synonyms.
+
+<img src="inst/synonym_logo/synonym_humor.png" width="200" alt="readability Logo">  
+
+# Functions
+
+| Function         |  Description                      |
+|------------------|-----------------------------------|
+| `get_sentiment`  | Lookup relevant synonyms          |
+| `drop_zero`      | Drop `NA`s\* from `get_synonym` objects                    |
+
+\**These were terms that are in the synonym key but did not meet the relevant distance.*
+
+
+# Demonstration
+
+```{r}
+get_synonym(c('cat', 'dog', 'chicken', 'dfsf'))
+get_synonym('cat', 1)
+get_synonym('cat', 2)
+get_synonym('cat', 3)
+get_synonym('cat', 2:3)
+drop_zero(
+    get_synonym(c('cat', 'dog', 'chicken', 'dfsf'))
+)
+
+```
+
+
+# Installation
+
+To download the development version of **synonym**:
+
+Download the [zip ball](https://github.com/trinker/synonym/zipball/master) or [tar ball](https://github.com/trinker/synonym/tarball/master), decompress and run `R CMD INSTALL` on it, or use the **pacman** package to install the development version:
+
+```r
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load_gh("trinker/synonym")
+```
+
+# Contact
+
+You are welcome to:    
+- submit suggestions and bug-reports at: <https://github.com/trinker/synonym/issues>    
+- send a pull request on: <https://github.com/trinker/synonym/>    
+- compose a friendly e-mail to: <tyler.rinker@gmail.com>    
