@@ -117,7 +117,8 @@ ball](https://github.com/trinker/synonym/tarball/master), decompress and
 run `R CMD INSTALL` on it, or use the **pacman** package to install the
 development version:
 
-    v
+    if (!require("pacman")) install.packages("pacman")
+    pacman::p_load_gh("trinker/synonym")
 
 Contact
 =======
