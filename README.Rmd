@@ -38,6 +38,9 @@ verbadge <- sprintf('<a href="https://img.shields.io/badge/Version-%s-orange.svg
 # Demonstration
 
 ```{r}
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load_gh("trinker/synonym")
+
 get_synonym(c('cat', 'dog', 'chicken', 'dfsf'))
 get_synonym('cat', 1)
 get_synonym('cat', 2)
@@ -57,8 +60,7 @@ To download the development version of **synonym**:
 Download the [zip ball](https://github.com/trinker/synonym/zipball/master) or [tar ball](https://github.com/trinker/synonym/tarball/master), decompress and run `R CMD INSTALL` on it, or use the **pacman** package to install the development version:
 
 ```r
-if (!require("pacman")) install.packages("pacman")
-pacman::p_load_gh("trinker/synonym")
+v
 ```
 
 # Contact

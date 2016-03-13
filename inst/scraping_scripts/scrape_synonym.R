@@ -97,54 +97,12 @@ for (i in tail(seq_along(ends), -1)){
 synonym_key <- lapply(dir('synonyms', full.names = TRUE), function(x){
     data.table::data.table(readRDS(file=x))[, 
         relevance := 4 - relevance][, 
-        .(json = toJSON(.SD)), by = term][]
+        .(json = convert_non_ascii(as.character(toJSON(.SD)))), by = term][]
 }) %>%
     bind_rows() %>%
-    as.data.table()
+    as.data.table() 
 
 
 setkey(synonym_key, 'term')
-
-get_synonym <- function(x, distance = 1, key = synonym_key, ...) {
-    syn_key <- data.table::copy(key)
-    hits <- syn_key[term %in% x,]
-    out <- stats::setNames(lapply(hits[['json']], function(x) {
-        trimws(data.table::as.data.table(jsonlite::fromJSON(x))[relevance %in% distance, ][['synonym']])
-    }), hits[['term']])
-   
-    if (length(out) == 0) {warning('No relevant matches found'); return(invisible(NULL))}
-    lens <- sapply(out, length) == 0
-    if (any(lens)) out[lens] <- NA
-
-    class(out) <- c('get_synonym', class(out))
-    attributes(out)[['terms']] <- x
-    out
-}
-
-print.get_synonym <- function(x, ...){
-    class(x) <- 'list'
-    attributes(x)[['terms']] <- NULL
-    print(x)
-}
-
-drop_zero <- function(x, ...){
-    lens <- sapply(x, function(y) length(y) == 1 && is.na(y)) 
-    if (any(lens)) x[lens] <- NULL
-    if (length(x) == 0) return(NULL)
-    x
-}
-
-
-get_synonym(c('cat', 'dog', 'chicken', 'dfsf')) 
-get_synonym('cat', 2) 
-
-
-get_synonym(c('cat', 'dog', 'chicken', 'dfsf')) %>%
-    drop_zero()
-
-get_synonym('cat') %>%
-    drop_zero()
-
-
 
 pack.skel(synonym_key)

@@ -56,6 +56,9 @@ relevant distance.*
 Demonstration
 =============
 
+    if (!require("pacman")) install.packages("pacman")
+    pacman::p_load_gh("trinker/synonym")
+
     get_synonym(c('cat', 'dog', 'chicken', 'dfsf'))
 
     ## $cat
@@ -114,8 +117,7 @@ ball](https://github.com/trinker/synonym/tarball/master), decompress and
 run `R CMD INSTALL` on it, or use the **pacman** package to install the
 development version:
 
-    if (!require("pacman")) install.packages("pacman")
-    pacman::p_load_gh("trinker/synonym")
+    v
 
 Contact
 =======

@@ -16,6 +16,9 @@
 #' \code{x} terms found in \code{key} but not meeting the distance criteria
 #' return as \code{NA}.
 #' @keywords synonym
+#' @importFrom data.table copy setkey as.data.table data.table
+#' @importFrom jsonlite fromJSON
+#' @importFrom stats setNames
 #' @export
 #' @examples
 #' get_synonym(c('cat', 'dog', 'chicken', 'dfsf'))
@@ -30,12 +33,16 @@
 #' )
 get_synonym <- function(x, distance = 1, key = synonym::synonym_key, ...) {
 
-    synonym_key <- term <- relevance <- NULL
+    synonym_key <- term <- json <- relevance <- NULL
 
     if (!all(distance %in% 1:3)) stop('`distance` must be a vector consisting of only 1, 2, and/or 3')
 
     syn_key <- data.table::copy(key)
-    hits <- syn_key[term %in% x,]
+    data.table::setkey(syn_key, 'term')
+
+    terms <- data.table::data.table(term = x)
+    hits <- syn_key[terms][!is.na(json),]
+
     out <- stats::setNames(lapply(hits[['json']], function(x) {
         trimws(data.table::as.data.table(jsonlite::fromJSON(x))[relevance %in% distance, ][['synonym']])
     }), hits[['term']])

@@ -6,7 +6,7 @@ Authors@R: c(person("Tyler", "Rinker", email =
 Maintainer: Tyler Rinker <tyler.rinker@gmail.com>
 Description: Fast 'data.table' lookups of relevant synonyms.
 Depends: R (>= 3.2.3)
-Imports: data.table, jsonlite, stats
+Imports: jsonlite, data.table, stats
 Suggests: testthat
 Date: 2016-03-13
 License: GPL-2
