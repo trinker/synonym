@@ -40,7 +40,7 @@ Functions
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><code>get_sentiment</code></td>
+<td align="left"><code>get_synonym</code></td>
 <td align="left">Lookup relevant synonyms</td>
 </tr>
 <tr class="even">
