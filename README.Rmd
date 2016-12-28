@@ -29,7 +29,7 @@ verbadge <- sprintf('<a href="https://img.shields.io/badge/Version-%s-orange.svg
 
 | Function         |  Description                      |
 |------------------|-----------------------------------|
-| `get_sentiment`  | Lookup relevant synonyms          |
+| `get_synonym`  | Lookup relevant synonyms          |
 | `drop_zero`      | Drop `NA`s\* from `get_synonym` objects                    |
 
 \**These were terms that are in the synonym key but did not meet the relevant distance.*
