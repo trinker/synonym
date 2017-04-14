@@ -41,7 +41,7 @@ Functions
 </thead>
 <tbody>
 <tr class="odd">
-<td><code>get_sentiment</code></td>
+<td><code>get_synonym</code></td>
 <td>Lookup relevant synonyms</td>
 </tr>
 <tr class="even">
@@ -58,9 +58,6 @@ Demonstration
 =============
 
     if (!require("pacman")) install.packages("pacman")
-
-    ## Loading required package: pacman
-
     pacman::p_load_gh("trinker/synonym")
 
     get_synonym(c('cat', 'dog', 'chicken', 'dfsf'))
