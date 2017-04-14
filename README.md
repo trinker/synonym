@@ -11,12 +11,13 @@ Status](https://travis-ci.org/trinker/synonym.svg?branch=master)](https://travis
 Status](https://coveralls.io/repos/trinker/synonym/badge.svg?branch=master)](https://coveralls.io/r/trinker/synonym?branch=master)
 <a href="https://img.shields.io/badge/Version-0.0.1-orange.svg"><img src="https://img.shields.io/badge/Version-0.0.1-orange.svg" alt="Version"/></a>
 </p>
-<img src="inst/synonym_logo/r_synonym.png" width="150" alt="readability Logo">
+
+![](tools/synonym_logo/r_synonym.png)
 
 **synonym** is a synonyms data set wrapped with a few tools for quickly
 looking up relevant synonyms.
 
-<img src="inst/synonym_logo/synonym_humor.png" width="400" alt="readability Logo">
+![](tools/synonym_logo/synonym_humor.png)
 
 
 Table of Contents
@@ -34,18 +35,18 @@ Functions
 <table>
 <thead>
 <tr class="header">
-<th align="left">Function</th>
-<th align="left">Description</th>
+<th>Function</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><code>get_sentiment</code></td>
-<td align="left">Lookup relevant synonyms</td>
+<td><code>get_sentiment</code></td>
+<td>Lookup relevant synonyms</td>
 </tr>
 <tr class="even">
-<td align="left"><code>drop_zero</code></td>
-<td align="left">Drop <code>NA</code>s* from <code>get_synonym</code> objects</td>
+<td><code>drop_zero</code></td>
+<td>Drop <code>NA</code>s* from <code>get_synonym</code> objects</td>
 </tr>
 </tbody>
 </table>
@@ -57,6 +58,9 @@ Demonstration
 =============
 
     if (!require("pacman")) install.packages("pacman")
+
+    ## Loading required package: pacman
+
     pacman::p_load_gh("trinker/synonym")
 
     get_synonym(c('cat', 'dog', 'chicken', 'dfsf'))
@@ -123,5 +127,7 @@ development version:
 Contact
 =======
 
-You are welcome to:   - submit suggestions and bug-reports at: <https://github.com/trinker/synonym/issues>   - send a pull request on: <https://github.com/trinker/synonym/>  
- compose a friendly e-mail to: <tyler.rinker@gmail.com>
+You are welcome to:    
+- submit suggestions and bug-reports at: <https://github.com/trinker/synonym/issues>    
+- send a pull request on: <https://github.com/trinker/synonym/>    
+- compose a friendly e-mail to: <tyler.rinker@gmail.com>    

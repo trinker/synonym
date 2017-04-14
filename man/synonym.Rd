@@ -2,11 +2,10 @@
 % Please edit documentation in R/synonym-package.R
 \docType{package}
 \name{synonym}
-\alias{package-synonym}
 \alias{synonym}
+\alias{package-synonym}
 \alias{synonym-package}
 \title{Find Relevant Synonyms}
 \description{
 Fast \pkg{data.table} lookups of relevant synonyms.
 }
-

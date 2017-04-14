@@ -14,4 +14,3 @@
 \description{
 Prints a get_synonym object
 }
-

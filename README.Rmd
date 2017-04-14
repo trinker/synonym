@@ -19,11 +19,11 @@ verbadge <- sprintf('<a href="https://img.shields.io/badge/Version-%s-orange.svg
 [![Coverage Status](https://coveralls.io/repos/trinker/synonym/badge.svg?branch=master)](https://coveralls.io/r/trinker/synonym?branch=master)
 `r verbadge`
 
-<img src="inst/synonym_logo/r_synonym.png" width="150" alt="readability Logo">  
+![](tools/synonym_logo/r_synonym.png) 
 
 **synonym** is a synonyms data set wrapped with a few tools for quickly looking up relevant synonyms.
 
-<img src="inst/synonym_logo/synonym_humor.png" width="400" alt="readability Logo">  
+![](tools/synonym_logo/synonym_humor.png)
 
 # Functions
 

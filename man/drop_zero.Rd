@@ -26,4 +26,3 @@ drop_zero(
     get_synonym(c('cat', 'dog', 'chicken', 'dfsf'))
 )
 }
-

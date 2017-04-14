@@ -15,7 +15,10 @@ README.Rmd
 README.R
 travis.yml
 inst/maintenance.R
-inst/synonym_logo
+Thumb.db
+tools/synonym_logo/r_synonyma.png
+tools/synonym_logo/r_synonym.pptx
+tools/synonym_logo/resize_icon.txt
 inst/staticdocs
 inst/extra_statdoc
 scraping_scripts

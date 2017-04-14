@@ -8,8 +8,8 @@ Description: Fast 'data.table' lookups of relevant synonyms.
 Depends: R (>= 3.2.3)
 Imports: jsonlite, data.table, stats
 Suggests: testthat
-Date: 2016-03-13
+Date: 2017-04-14
 License: GPL-2
 LazyData: TRUE
 Roxygen: list(wrap = FALSE)
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1

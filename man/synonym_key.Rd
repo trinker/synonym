@@ -25,4 +25,3 @@ then in turn be converted to a \code{\link[base]{data.frame}} via the
 \url{http://www.thesaurus.com}
 }
 \keyword{datasets}
-
